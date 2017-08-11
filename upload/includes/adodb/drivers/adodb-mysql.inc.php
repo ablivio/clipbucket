@@ -107,7 +107,7 @@ class ADODB_mysql extends ADOConnection {
 	{
 		$total_fields = count($flds);
 		$count = 0;
-		var_dump($total_fields);
+		//var_dump($total_fields);
 		for($i=0;$i<$total_fields;$i++)
 		{
 			$count++;
