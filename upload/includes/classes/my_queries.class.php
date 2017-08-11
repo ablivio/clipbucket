@@ -1110,7 +1110,7 @@ class myquery {
 	function get_conversion_queue($cond=NULL,$limit=NULL,$order='date_added DESC')
 	{
 		global $db;
-		$result = $db->select(tbl("conversion_queue"),"*",$cond,$limit,$oder);
+		$result = $db->select(tbl("conversion_queue"),"*",$cond,$limit,$order);
 		if($db->num_rows>0)
 			return $result;
 		else
