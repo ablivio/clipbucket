@@ -136,7 +136,14 @@
 		if (get_magic_quotes_gpc()) {
 			$id = stripslashes($id);
 		}
-		$id = htmlspecialchars(mysqli_real_escape_string($db->mysqli,$id));
+		
+		// mysqli_real_escape_string replaced by mysql_real_escape_string below
+		// because the mysqli_ version was not working properly
+		// (maybe sometimes called when there is no DB connection,
+		// resulting in an empty string rather than a cleaned one.
+	
+		//$id = htmlspecialchars(mysqli_real_escape_string($db->mysqli,$id));
+		$id = htmlspecialchars(mysql_real_escape_string($id));
 		if($replacer) {
 			$id = Replacer($id);
 		}
