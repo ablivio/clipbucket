@@ -274,7 +274,7 @@ switch($mode)
 			}
 		}
 	
-		$TempLogData = 'Video Converson File executed successfully with Target File > !'.$targetFileName; 
+		$TempLogData = 'Video Conversion File executed successfully with Target File > !'.$targetFileName; 
 		$log->writeLine('Video Conversion File Execution', $TempLogData, true);	
 		
 
